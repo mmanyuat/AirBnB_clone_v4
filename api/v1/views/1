@@ -129,7 +129,6 @@ def places_search():
                data = request.get_json()
                    else:
                      return jsonify({"error": "Not a JSON"}), 400
-    places = storage.all(Place).values()
 
    if request.get_json() is None:
         abort(400, description="Not a JSON")
